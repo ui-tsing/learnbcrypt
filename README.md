@@ -11,7 +11,7 @@
 * 登出刪除session
 
 ## bcrypt() 是如何運作的？
-使用者密碼 -> bcrypt不可回復加密 -> 儲存用的加密後密碼
+使用者密碼 -> bcrypt不可回復加密 -> 儲存用的加密後密碼\
 John1234   -> bcrypt不可回復加密 -> $2a$12$f3naZucp1nvrE8GBtsUgW.b/nWKRLTZpNooPuNmI3ZIXeeGbjSLavi
 
 ## 使用bcrypt
