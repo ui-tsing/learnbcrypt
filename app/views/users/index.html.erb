@@ -1,0 +1,31 @@
+<h1><%= link_to 'Learn Bcrypt!', root_path%></h1>
+
+<h2>Session狀態</h2>
+
+ID: <%= @current_id %><br>
+Username: <%= @current_name %><br>
+<%= link_to "登出" , logout_path, method: :delete %>
+<h2>登入</h2>
+<%= form_with url: login_path do |log|%>
+<%= log.label :name%>
+<%= log.text_field :name%>
+<%= log.label :password%>
+<%= log.password_field :password %>
+<%= log.submit '登入'%>
+<% end %>
+
+<h2>註冊使用者</h2>
+<%= form_with model: @user do |form| %>
+<%= form.label :name%>
+<%= form.text_field :name%>
+<%= form.label :password%>
+<%= form.password_field :password %>
+<%= form.submit%>
+<% end %>
+
+<h2>所有使用者</h2>
+<ul>
+<% @users.each do |user|%>
+<li>ID: <%= user.id %>, 帳號: <%= user.name %>, 密碼: <%= user.password %></li>
+<% end %>
+</ul>
