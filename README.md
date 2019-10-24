@@ -1,6 +1,8 @@
 # 在Rails使用bcrypt-ruby製作使用者認證
 在有些輕量的專案，可能不需要使用龐大的Devise，或是覺得要特殊設置Devise比較不方便去修改的時候。自己刻一個反而會變成比較快的選項。
 
+附註：Rails附有已經做好比較方便使用的[has_secure_password](https://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html#method-i-has_secure_password)方法。
+
 本篇的目標是做出一個可以登入登出的使用者認證。
 * 註冊並加密密碼
 * 登入建立session給使用者cookie
